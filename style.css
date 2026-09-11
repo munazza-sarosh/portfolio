@@ -68,7 +68,7 @@ header {
 }
 
 .logo span {
-    color:#aab5c5;
+    color: #aab5c5;
 }
 
 .nav-links {
@@ -110,8 +110,15 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 60px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
+.hero.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 .hero-content {
     max-width: 650px;
 }
@@ -200,7 +207,6 @@ header {
 /* =========================
    PROFILE IMAGE
 ========================= */
-
 .hero-image {
     display: flex;
     justify-content: center;
@@ -213,12 +219,10 @@ header {
     border-radius: 50%;
     padding: 8px;
 
-    background: linear-gradient(
-        135deg,
-        var(--accent),
-        transparent,
-        var(--accent-light)
-    );
+    background: linear-gradient(135deg,
+            var(--accent),
+            transparent,
+            var(--accent-light));
 
     animation: float 4s ease-in-out infinite;
 }
@@ -248,12 +252,19 @@ header {
    SECTIONS
 ========================= */
 
+
 .section {
     max-width: 1150px;
     margin: auto;
     padding: 100px 25px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 .section-heading {
     margin-bottom: 50px;
 }
@@ -336,6 +347,13 @@ header {
 
 .skills-section {
     max-width: 1150px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.skills-section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .skills-container {
@@ -435,8 +453,14 @@ header {
     padding: 30px;
     overflow: hidden;
     transition: 0.3s;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
 }
-
+.project-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 .project-card:hover {
     transform: translateY(-8px);
     border-color: var(--accent);
@@ -464,7 +488,7 @@ header {
     margin-bottom: 12px;
 }
 
-.project-content > p:not(.project-type) {
+.project-content>p:not(.project-type) {
     color: var(--text-light);
     font-size: 14px;
     margin-bottom: 25px;
@@ -491,8 +515,14 @@ header {
 
 .education-section {
     max-width: 900px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
+.education-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 .timeline {
     position: relative;
     padding-left: 30px;
@@ -559,8 +589,14 @@ header {
 
 .contact-section {
     max-width: 1000px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
+.contact-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 .contact-container {
     background: var(--card);
     border: 1px solid var(--border);
@@ -582,7 +618,7 @@ header {
     margin-bottom: 15px;
 }
 
-.contact-text > p:last-child {
+.contact-text>p:last-child {
     color: var(--text-light);
 }
 
